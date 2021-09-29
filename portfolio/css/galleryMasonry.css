@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  margin: 50px 0 20px;
+}
+
+.line {
+  width: 20%;
+  height: 3px;
+  background-color: black;
+  margin: 0 auto 30px;
+}
+
+.galleryOne {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  grid-auto-flow: dense;
+  grid-gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 619px) {
+  .galleryOne {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+.tall {
+  grid-row: span 2;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.gallery_item {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery_item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.gallery_item img:hover {
+  -webkit-transform: scale(1.3) rotate(5deg);
+          transform: scale(1.3) rotate(5deg);
+  cursor: pointer;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.back_main {
+  list-style: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 12;
+}
+
+.back_main li a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 30px;
+  color: #EBF3FB;
+  text-shadow: 1px 1px 7px #424648;
+}
+
+.back_main li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.in_top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 12;
+}
+
+.in_top > a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 30px;
+  color: #EBF3FB;
+  text-shadow: 1px 1px 7px #424648;
+}
+
+.in_top:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+/*# sourceMappingURL=galleryMasonry.css.map */

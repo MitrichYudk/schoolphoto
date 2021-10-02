@@ -366,13 +366,13 @@ button {
         max-width: 800px;
     text-align: justify;
     text-indent: 50px;
-        padding: 0 20px;
+        // padding: 0 20px;
         font-size: 18px;
         color: $text-color-dark;
         
         display: block;
         margin: 0 auto;
-        @media (max-width: 768px) {
+        @media (max-width: 876px) {
             width: 98%;
         }
     }
